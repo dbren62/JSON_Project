@@ -41,19 +41,31 @@ for i in old_list:
 
 #The filter part answers the question if the item should be transformed. '''
 
+#classic way
+old_list = [1,2,3,4,5]
+new_list = []
+
+for i in old_list:
+    i=i**2
+    new_list.append(i)
+
+print(new_list)
+
+#new way
+new_list = [i**2 for i in old_list]
+
+print(new_list)
+
 #1) creating a simple list of 10 numbers using Range()
 
-
-
+x = [i for i in range(10)]
+print(x)
 # Output -[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-
-
 
 #2) creating a list that evaluates an expression
 
-
+squares = [i**2 for i in range(10)]
+print(squares)
 
 # Output -[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
@@ -63,6 +75,9 @@ for i in old_list:
 
 #3) creating a list from another list
 
+list1 = [3,4,5]
+multiplied = [item*3 for item in list1]
+print(multiplied)
 
 
 #[9,12,15]
@@ -71,7 +86,9 @@ for i in old_list:
 
 # 4) using list comprehension for string manipulation
 
-
+listOfWords = ['this','is','a','list','of','words']
+firstLetter = [i[0] for i in listOfWords]
+print(firstLetter)
 
 
 # Output - ['t', 'i', 'a', 'l', 'o', 'w']
@@ -80,9 +97,15 @@ for i in old_list:
 
 # 5) Let's show how easy you can convert lower case / upper case letters.
 
+output = [x.lower() for x in ['A','B','C']]
+print(output)
+
+
 
 #Output 1 - ['a', 'b', 'c']
 
+output = [x.upper() for x in ['A','B','C']]
+print(output)
 
 # Output 2 - ['A', 'B', 'C']
 
