@@ -24,17 +24,24 @@ print(lats[:10])
 
 from plotly.graph_objs import Scattergeo, Layout
 from plotly import offline
-
-
+"""
+brightnesses.sort()
+"""
 data = [{
     'type':'scattergeo',
     'lon':lons,
     'lat':lats,
     'marker':{
-        'size':[5*brightness for brightness in brightnesses],
+        'size':[.03*brightness for brightness in brightnesses],
         'color':brightness,
         'colorscale':'Viridis',
         'reversescale':True,
         'colorbar':{'title':'Brightness'}
     }
 }]
+
+my_layout = Layout(title="US Fires")
+
+fig = {"data": data, "layout": my_layout}
+
+offline.plot(fig, filename="US_fires.html")
