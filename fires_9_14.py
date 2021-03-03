@@ -1,6 +1,6 @@
 import json
 
-infile = open("US_fires_9_1.json", "r")
+infile = open("US_fires_9_14.json", "r")
 
 fire_data = json.load(infile)
 
@@ -40,7 +40,7 @@ data = [{
     }
 }]
 
-my_layout = Layout(title="US Fires 9/1/2020 through 9/13/2020")
+my_layout = Layout(title="US Fires 9/14/2020 through 9/30/2020")
 
 fig = {"data": data, "layout": my_layout}
 
